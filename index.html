@@ -1,0 +1,312 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P70XTMZ5TX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P70XTMZ5TX');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreceDigital-Online</title>
+
+  <style>
+    /* === ESTILOS GENERALES === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+      background: url('a.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2px);
+    }
+
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+      animation: fadeIn 2s ease;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .btn-principal {
+      background: #00b894;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-principal:hover {
+      background: #007acc;
+      transform: scale(1.05);
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 50px auto;
+      border-radius: 20px;
+      padding: 50px 20px;
+      width: 90%;
+      max-width: 1100px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #007acc;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    /* === NUEVO ESTILO DE TARJETAS DE CURSOS === */
+    .cursos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .curso {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .curso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.20);
+    }
+
+    .curso img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .curso h3 {
+      color: #222;
+      font-size: 1.2em;
+      margin: 15px 15px 5px 15px;
+    }
+
+    .curso p {
+      color: #555;
+      font-size: 0.95em;
+      margin: 0 15px 15px 15px;
+    }
+
+    .estrellas {
+      color: #f1c40f;
+      font-size: 1.1em;
+      margin: 0 15px;
+    }
+
+    .detalles {
+      font-size: 0.85em;
+      color: #666;
+      margin: 8px 15px 15px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* === TESTIMONIOS === */
+    .testimonios {
+      background: linear-gradient(120deg, #007acc, #00b894);
+      color: white;
+      border-radius: 15px;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .testimonios h2 {
+      color: white;
+    }
+
+    .testimonio {
+      margin: 20px auto;
+      max-width: 700px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* === FORMULARIO === */
+    .formulario {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00b894;
+      box-shadow: 0 0 5px rgba(0,184,148,0.5);
+    }
+
+    button {
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00b894;
+    }
+
+    footer {
+      background: #004d66;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav style="background: rgba(0,0,0,0.6); padding: 15px; text-align: center; border-bottom: 2px solid #00b894;">
+    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Inicio</a>
+    <a href="nosotros.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Nosotros</a>
+    <a href="contacto.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Contacto</a>
+    <a href="pago.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Pago</a>
+    <a href="terminos.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Terminos y Condiciones</a>
+  </nav>
+
+  <h1>Crece Digital</h1>
+  <p>Domina Word, Excel y PowerPoint con nuestros cursos en línea</p>
+</header>
+
+
+<!-- Sección de cursos -->
+<section id="cursos"> 
+  <h2>Nuestros Cursos</h2>
+  <div class="cursos">
+
+    <div class="curso">
+      <a href="word.html">
+        <img src="exploradores.jpg" alt="Word">
+        <h3>Exploradores Digitales</h3>
+        <div class="Estrellas">⭐⭐⭐⭐⭐ 4.9</div>
+        <p>Un curso diseñado para que los niños entren al mundo digital de forma segura y divertida.</p>
+        <div class="detalles">
+          <span>100 alumnos</span>
+          <span>1h:00m</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="curso">
+      <a href="excel.html">
+        <img src="officeb.jpg" alt="Excel">
+        <h3>Office Básico Esencial (Adultos)</h3>
+        <div class="estrellas">⭐⭐⭐⭐⭐ 4.8</div>
+        <p>Curso ideal para quienes inician desde cero.</p>
+        <div class="detalles">
+          <span>200 alumnos</span>
+          <span>1h:00m</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="curso">
+      <a href="power.html">
+        <img src="oficeavanzado.jpg" alt="Excel Laboral">
+        <h3>Excel para el Mundo Laboral</h3>
+        <div class="estrellas">⭐⭐⭐⭐⭐ 4.9</div>
+        <p>Pensado para quienes desean mejorar su desempeño profesional.</p>
+        <div class="detalles">
+          <span>14775 alumnos</span>
+          <span>1h:30m</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="curso">
+      <a href="Office Profesional Avanzado.html">
+        <img src="ofa.jpg" alt="Office Avanzado">
+        <h3>Office Profesional Avanzado (Adultos)</h3>
+        <div class="estrellas">⭐⭐⭐⭐⭐ 4.8</div>
+        <p>Curso avanzado para usuarios que desean perfeccionar sus habilidades.</p>
+        <div class="detalles">
+          <span>200 alumnos</span>
+          <span>2h:00m</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Testimonios -->
+<section class="testimonios">
+  <h2>Lo que opinan nuestros alumnos</h2>
+  <div class="testimonio">
+    <p>“Los cursos de CreceDigital son excelentes, aprendí más en una semana que en meses por mi cuenta.”</p>
+    <p>— Ana Torres, estudiante</p>
+  </div>
+</section>
+
+</body>
+</html>

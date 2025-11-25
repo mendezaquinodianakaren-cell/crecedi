@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - OfiMaster</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: radial-gradient(circle at top, #003b73, #000428);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.10);
+      padding: 18px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* CONTENEDOR CENTRAL */
+    .container {
+      width: 450px;
+      margin: 100px auto;
+      padding: 35px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+      position: relative;
+      animation: slideUp 1s ease;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2.2rem;
+      text-shadow: 0 0 15px #00eaff;
+    }
+
+    /* FORMULARIO */
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 12px;
+      border: none;
+      background: rgba(255,255,255,0.20);
+      color: white;
+      font-size: 1em;
+      outline: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #e4e4e4;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(135deg, #00eaff, #00bcd4);
+      color: #00344f;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00eaff;
+    }
+
+    /* TARJETAS FLOTANTES LATERALES */
+    .side-box {
+      position: absolute;
+      width: 230px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .left {
+      left: -270px;
+      top: 40px;
+    }
+
+    .right {
+      right: -270px;
+      top: 120px;
+    }
+
+    .side-box h3 {
+      color: #00eaff;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    .side-box p {
+      font-size: 0.85rem;
+    }
+
+    /* ICONOS */
+    .icon {
+      font-size: 2.3rem;
+      margin-bottom: 8px;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* ANIMACIONES */
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="pago.html">Pago</a>
+    <a href="terminos.html">Términos</a>
+  </nav>
+
+  <!-- FORMULARIO CENTRAL -->
+  <div class="container">
+
+    <!-- TARJETAS FLOTANTES A LOS LADOS -->
+    <div class="side-box left">
+      <div class="icon">📩</div>
+      <h3>Respuestas rápidas</h3>
+      <p>Tu mensaje es atendido en menos de 24 horas.</p>
+    </div>
+
+    <div class="side-box right">
+      <div class="icon">🎧</div>
+      <h3>Soporte 24/7</h3>
+      <p>Siempre disponibles para dudas sobre tus cursos.</p>
+    </div>
+
+    <h1>Contáctanos</h1>
+
+    <form action="https://formspree.io/f/xqaolqqj" method="POST">
+    <input type="text" name="Nombre" placeholder="Tu nombre completo" required>
+    <input type="email" name="Correo" placeholder="Tu correo electrónico" required>
+    <textarea name="Mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+
+    <button type="submit">Enviar</button>
+</form>
+
+  </div>
+
+</body>
+</html>
+

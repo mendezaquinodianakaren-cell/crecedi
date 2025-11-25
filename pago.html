@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago - OfiMaster</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: radial-gradient(circle at top, #003b73, #000428);
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    nav {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.10);
+      padding: 18px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 40px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 15px #00eaff;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    /* TABLA ESTILO GLASS */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th {
+      background: rgba(0, 231, 255, 0.30);
+      padding: 15px;
+      font-size: 1rem;
+      text-shadow: 0 0 5px #00eaff;
+    }
+
+    td {
+      padding: 15px;
+      background: rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.95rem;
+    }
+
+    tr:hover td {
+      background: rgba(0, 234, 255, 0.15);
+      transition: 0.3s;
+    }
+
+    /* BOTÓN DE PAGO */
+    .btn {
+      display: block;
+      margin: 40px auto 0;
+      width: 220px;
+      padding: 14px;
+      text-align: center;
+      background: linear-gradient(135deg, #00eaff, #00bcd4);
+      color: #00344f;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 18px #00eaff;
+    }
+
+    /* DECORACIONES FLOTANTES */
+    .float-box {
+      position: absolute;
+      width: 230px;
+      padding: 20px;
+      background: rgba(255,255,255,0.10);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      animation: float 6s infinite ease-in-out;
+      font-size: 0.9rem;
+    }
+
+    .float1 { top: 150px; left: 40px; }
+    .float2 { top: 350px; right: 40px; animation-delay: 2s; }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-25px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 850px){
+      .float-box { display: none; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="pago.html">Pago</a>
+    <a href="terminos.html">Términos</a>
+  </nav>
+
+  <!-- TARJETAS DECORATIVAS -->
+  <div class="float-box float1">
+    ⭐ Cursos 100% en línea<br>
+    ✔ Horarios flexibles<br>
+    ✔ Constancia incluida
+  </div>
+
+  <div class="float-box float2">
+    🎧 Soporte por WhatsApp<br>
+    📚 Material descargable<br>
+    💻 Prácticas reales
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container">
+    <h1>Planes y Paquetes</h1>
+    <p>Elige el paquete ideal y empieza tu aprendizaje hoy mismo.</p>
+
+    <table>
+      <tr>
+        <th>Paquete</th>
+        <th>Dirigido a</th>
+        <th>Modalidad</th>
+        <th>Duración</th>
+        <th>Herramientas</th>
+        <th>Incluye</th>
+      </tr>
+
+      <tr>
+        <td>Exploradores Digitales</td>
+        <td>Niños (8-12 años)</td>
+        <td>En línea (Zoom)</td>
+        <td>6 semanas</td>
+        <td>Word básico, presentaciones creativas, teclado y formato</td>
+        <td>Material descargable + Guía visual + Constancia</td>
+      </tr>
+
+      <tr>
+        <td>Office Básico Esencial</td>
+        <td>Adultos (principiante)</td>
+        <td>En línea (Zoom)</td>
+        <td>8 semanas</td>
+        <td>Word, Excel y PowerPoint básico</td>
+        <td>Archivos de práctica + Constancia</td>
+      </tr>
+
+      <tr>
+        <td>Excel para el Mundo Laboral</td>
+        <td>Adultos (nivel laboral)</td>
+        <td>En línea (Zoom)</td>
+        <td>6 semanas</td>
+        <td>Excel intermedio, funciones, gráficos, tablas</td>
+        <td>Ejercicios reales + Constancia</td>
+      </tr>
+
+      <tr>
+        <td>Office Profesional Avanzado</td>
+        <td>Adultos con experiencia</td>
+        <td>En línea (Zoom)</td>
+        <td>8 semanas</td>
+        <td>Word avanzado, Excel avanzado, PowerPoint profesional</td>
+        <td>Manual completo + Constancia</td>
+      </tr>
+    </table>
+
+    <button class="btn" onclick="alert('✅ Pago simulado con éxito. ¡Gracias por tu compra!')">
+      Pagar ahora
+    </button>
+
+  </div>
+
+</body>
+</html>
